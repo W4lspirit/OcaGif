@@ -1,0 +1,24 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="luigi.wal.walgif">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name">
+        <service
+            android:name=".GIFWallpaperService"
+            android:label="GIF Wallpaper"
+            android:permission="android.permission.BIND_WALLPAPER">
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/wallpaper" />
+
+        </service>
+
+    </application>
+    <uses-feature
+        android:name="android.software.live_wallpaper"
+        android:required="true" />
+</manifest>
