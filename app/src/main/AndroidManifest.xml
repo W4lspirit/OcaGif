@@ -6,8 +6,9 @@
         android:name="android.software.live_wallpaper"
         android:required="true" />
 
-    <application
+    <uses-permission android:name="android.permission.INTERNET" />
 
+    <application
         android:allowBackup="true"
         android:label="@string/app_name">
         <service
@@ -24,19 +25,15 @@
         </service>
 
         <activity
-            android:name=".ArchillectFullscreenActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_archillect_fullscreen"
-            android:theme="@style/FullscreenTheme">
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
-
 
 </manifest>
