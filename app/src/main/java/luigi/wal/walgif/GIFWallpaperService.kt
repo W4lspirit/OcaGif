@@ -75,6 +75,7 @@ class GIFWallpaperService : WallpaperService() {
         private var holder: SurfaceHolder? = null
         private var visible: Boolean = false
         private val handler: Handler
+
         /**
          * FIELDS BELLOW
          * THIS WILL BECOME FUNCTIONS
